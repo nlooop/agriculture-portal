@@ -451,10 +451,12 @@ function fetchMessages() {
 			authorN.append(authorName);
 			
         }).fail(function(jqXHR, textStatus, errorThrown) {
+			chatbox.innerHTML = '';  
 			let errorMessage = 'Farming looks mighty easy when your plow is a pencil, and youre a thousand miles from the corn field.';
 			chatbox.append(errorMessage);
         });
     } catch (error) {
+		chatbox.innerHTML = '';  
 		let errorMessage2 = 'Farming looks mighty easy when your plow is a pencil, and youre a thousand miles from the corn field.';
 		chatbox.append(errorMessage2);
     }
